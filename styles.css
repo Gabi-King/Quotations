@@ -1,0 +1,178 @@
+/* Text */
+
+h1 {
+    margin: 0;
+    font-family: "Roboto", "Open Sans", "sans-serif";
+    font-weight: 100;
+    font-size: 3em;
+    font-variant: small-caps; /* All letters are in capital */
+    color: white;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
+    font-size: 2em;
+    color: DarkOrange;
+}
+
+body {
+    font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
+    font-size: 1em;
+    color: black;
+}
+
+
+/* Elements - Header/footer */
+
+header, footer {
+    text-align: center;
+    color: white;
+    background-color: DarkKhaki;
+    margin: 20px;
+    padding: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header .box {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px Gainsboro;
+    padding: 20px;
+}
+
+header a {
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+nav ul li {
+    list-style: none;
+    display: inline;
+}
+  
+header a {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
+  
+nav a:hover {
+    padding-bottom: 5px;
+    box-shadow: inset 0 -2px 0 0 #fff;
+}
+
+
+/* Elements - Body */
+
+body {
+    background-color: rgb(200, 200, 200); /* Light grey */
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+table, th, td {
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    background-color: Goldenrod;
+}
+
+hr {
+    border: none;
+    background-color: black;
+    height: 2px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+button {
+    background-color: Goldenrod;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+button:hover { /* When button is hovered */
+    background-color: DarkGoldenrod;
+}
+
+
+/* Widgets */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box {
+    background-color: LightGray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px Gainsboro;
+    padding: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+
+/* Add style */
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.bigger {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
