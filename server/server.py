@@ -13,6 +13,37 @@ db_credentials = {
     "database": "quotations",
 }
 
+@app.route("/api/quotations/get_stats", methods=["GET"])
+def get_stats():
+    try:
+        connection = mysql.connector.connect(**db_credentials)
+        cursor = connection.cursor(dictionary=True)
+
+        query_quotations = "SELECT COUNT(*) FROM quotations;"
+        cursor.execute(query_quotations)
+        row_quotations = cursor.fetchone()
+        count_quotations = row_quotations["COUNT(*)"]
+
+        query_authors = "SELECT COUNT(*) FROM authors;"
+        cursor.execute(query_authors)
+        row_authors = cursor.fetchone()
+        count_authors = row_authors["COUNT(*)"]
+
+        data = f'{{"quotations_count": "{count_quotations}", "authors_count": "{count_authors}"}}'
+        print(data)
+
+        to_return = jsonify({"data": data})
+        print(to_return)
+
+    except mysql.connector.Error as error:
+        to_return = jsonify({"error": error})
+
+    finally:
+        cursor.close()
+        connection.close()
+    
+    return to_return
+
 @app.route("/api/quotations/get_quotations_with_authors", methods=["GET"])
 def get_quotations_with_authors():
     try:
@@ -27,7 +58,7 @@ def get_quotations_with_authors():
         to_return = jsonify({"data": data})
 
     except mysql.connector.Error as error:  
-        to_return = jsonify({"error": str(error)})
+        to_return = jsonify({"error": error})
 
 
     finally:
