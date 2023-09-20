@@ -36,10 +36,10 @@ function displayData(data) {
 
 function displayQuotation(data) {
   let container = document.createElement("div");
-  container.className = "container";
+  container.className = "quote-container";
   
   let box = document.createElement("div");
-  box.className = "box";
+  box.className = "quote-box";
   
   let quote = document.createElement("q");
   quote.className = "left";

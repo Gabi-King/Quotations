@@ -32,14 +32,14 @@ header, footer {
     padding: 20px;
 }
 
-header .container {
+header .quote-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-header .box {
+header .quote-box {
     background-color: transparent;
     border: 3px solid white;
     border-radius: 10px;
@@ -120,18 +120,39 @@ button:hover { /* When button is hovered */
 
 /* Widgets */
 
-.container {
+.quote-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.box {
+.quote-box {
     background-color: LightGray;
     border-radius: 10px;
     box-shadow: 10px 10px 10px Gainsboro;
     padding: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.stats-box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid Black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px
 }
 
 .material-symbols-outlined {

@@ -37,16 +37,47 @@ function displayData(data) {
   let presentation = document.createElement("p");
   presentation.className = "center bigger";
   presentation.innerHTML = "Use our database of authors and quotations !<br>Here are all the advantages:";
-
-  let quotations_count = document.createElement("p");
-  quotations_count.innerHTML = `Quotations Count: ${data.quotations_count}`;
-
-  let authors_count = document.createElement("p");
-  authors_count.innerHTML = `Authors Count: ${data.authors_count}`;
-
   statsSection.appendChild(presentation);
-  statsSection.appendChild(quotations_count);
-  statsSection.appendChild(authors_count);
+
+  let statsContainer = document.createElement("div");
+  statsContainer.className = "stats-container";
+
+
+  let quotationsBox = document.createElement("div");
+  quotationsBox.className = "stats-box"
+  quotationsBox.style.border = "5px solid Green"
+
+  let quotationsCount = document.createElement("p");
+  quotationsCount.innerHTML = data.quotations_count;
+  quotationsCount.className = "bigger";
+
+  let quotationsDescription = document.createElement("p");
+  quotationsDescription.innerHTML = "Quotations known worldwide for their wisdom";
+  quotationsDescription.className = "center";
+
+
+  let authorsBox = document.createElement("div");
+  authorsBox.className = "stats-box";
+  authorsBox.style.border = "5px solid Orange";
+
+  let authorsCount = document.createElement("p");
+  authorsCount.innerHTML = data.authors_count;
+  authorsCount.className = "bigger";
+
+  let authorsDescription = document.createElement("p");
+  authorsDescription.innerHTML = "Authors known worldwide for their work";
+  authorsDescription.className = "center";
+
+  quotationsBox.appendChild(quotationsCount);
+  quotationsBox.appendChild(quotationsDescription);
+
+  authorsBox.appendChild(authorsCount);
+  authorsBox.appendChild(authorsDescription);
+
+  statsContainer.appendChild(quotationsBox);
+  statsContainer.appendChild(authorsBox);
+
+  statsSection.appendChild(statsContainer);
 }
 
 processApp()

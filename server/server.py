@@ -30,10 +30,7 @@ def get_stats():
         count_authors = row_authors["COUNT(*)"]
 
         data = f'{{"quotations_count": "{count_quotations}", "authors_count": "{count_authors}"}}'
-        print(data)
-
         to_return = jsonify({"data": data})
-        print(to_return)
 
     except mysql.connector.Error as error:
         to_return = jsonify({"error": error})
