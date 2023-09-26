@@ -15,7 +15,7 @@ async function processApp() {
 
 function fetchData() {
 
-  return fetch("http://127.0.0.1:5000/api/quotations/get_stats")
+  return fetch("http://localhost:5000/api/quotations/get_stats")
   .then(response => {
     if (!response.ok) {
       throw new Error(`Error requesting the server: '${response.status}'.`);
@@ -35,7 +35,7 @@ function fetchData() {
 
 function displayData(data) {
   let presentation = document.createElement("p");
-  presentation.className = "center bigger";
+  presentation.className = "center";
   presentation.innerHTML = "Use our database of authors and quotations !<br>Here are all the advantages:";
   statsSection.appendChild(presentation);
 

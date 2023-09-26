@@ -14,7 +14,7 @@ async function processApp() {
 }
 
 function fetchData() {
-  return fetch("http://127.0.0.1:5000/api/quotations/get_quotations_with_authors")
+  return fetch("http://localhost:5000/api/quotations/get_quotations_with_authors")
 
   .then(response => {
     if (!response.ok) {
