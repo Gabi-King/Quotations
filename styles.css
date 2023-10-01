@@ -19,6 +19,7 @@ body {
     font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
     font-size: 1em;
     color: black;
+    text-align: center;
 }
 
 
@@ -105,6 +106,21 @@ button {
 
 button:hover { /* When button is hovered */
     background-color: DarkGoldenrod;
+}
+
+input[type="text"] {
+    width: 80%;
+    font-size: 1em;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid Gainsboro;
+    border-radius: 10px;
+}
+  
+  input[type="text"]:focus { /* When the text input is selected */
+    outline: none;
+    border-color: DarkGoldenrod;
+    box-shadow: 0 0 5px DarkGoldenrod;
 }
 
 

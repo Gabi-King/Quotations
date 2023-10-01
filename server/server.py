@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import mysql.connector
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MySQL database credentials
-db_credentials = {
+db = {
     "host": "localhost",
     "user": "root",
     "password": "nm6dyr!&rZmr&7q#EFh$",
@@ -16,7 +16,7 @@ db_credentials = {
 @app.route("/api/quotations/get_stats", methods=["GET"])
 def get_stats():
     try:
-        connection = mysql.connector.connect(**db_credentials)
+        connection = mysql.connector.connect(**db)
         cursor = connection.cursor(dictionary=True)
 
         query_quotations = "SELECT COUNT(*) FROM quotations;"
@@ -44,7 +44,7 @@ def get_stats():
 @app.route("/api/quotations/get_quotations_with_authors", methods=["GET"])
 def get_quotations_with_authors():
     try:
-        connection = mysql.connector.connect(**db_credentials)
+        connection = mysql.connector.connect(**db)
         cursor = connection.cursor(dictionary=True)
 
         query = "SELECT * FROM quotations_with_authors;"
@@ -62,6 +62,31 @@ def get_quotations_with_authors():
         cursor.close()
         connection.close()
     
+    return to_return
+
+@app.route("/api/quotatotions/search_quotations", methods=["GET"])
+def search_quotations():
+    try:
+        connection = mysql.connector.connect(**db)
+        cursor = connection.cursor(dictionary=True)
+
+        phrase = request.args.get("phrase")
+
+        query = "SELECT * FROM quotations WHERE quotation LIKE %s"
+        
+        cursor.execute(query, (f"%{phrase}%", f"%{phrase}%"))
+        results = cursor.fetchall()
+
+        to_return = [str(result) for result in results]
+        to_return = jsonify({"result": to_return})
+    
+    except mysql.connector.Error as error:
+        to_return = jsonify({"error": error})
+
+    finally:
+        cursor.close()
+        connection.close()
+
     return to_return
 
 if __name__ == "__main__":
