@@ -64,7 +64,7 @@ def get_quotations_with_authors():
     
     return to_return
 
-@app.route("/api/quotatotions/search_quotations", methods=["GET"])
+@app.route("/api/quotations/search_quotations", methods=["GET"])
 def search_quotations():
     try:
         connection = mysql.connector.connect(**db)
@@ -72,16 +72,16 @@ def search_quotations():
 
         phrase = request.args.get("phrase")
 
-        query = "SELECT * FROM quotations WHERE quotation LIKE %s"
-        
-        cursor.execute(query, (f"%{phrase}%", f"%{phrase}%"))
-        results = cursor.fetchall()
+        query = "SELECT * FROM quotations_with_authors WHERE quotation LIKE %s"
+        cursor.execute(query, ('%' + phrase + '%',))
 
-        to_return = [str(result) for result in results]
-        to_return = jsonify({"result": to_return})
+        data = cursor.fetchall()
+
+        to_return = jsonify({"data": data})
     
     except mysql.connector.Error as error:
         to_return = jsonify({"error": error})
+        print(error)
 
     finally:
         cursor.close()

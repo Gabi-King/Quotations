@@ -1,31 +1,30 @@
-let quotationsStatus = document.getElementById("quotations-status");
-let quotationsSection = document.getElementById("quotations-section");
+const serverStatus = document.getElementById("server-status");
+const quotationsSection = document.getElementById("quotations-section");
 
 async function processApp() {
 
     await fetchData()
     .then(response => {
-      quotationsStatus.innerHTML = "Successfully connected to the database !";
-      displayData(response.data);
+      serverStatus.innerHTML = "Successfully connected to the database !";
+      displayData(response);
     })
     .catch(error => {
-      quotationsStatus.innerHTML = error.message;
+      serverStatus.innerHTML = error.message;
     });
 }
 
-function fetchData() {
-  return fetch("http://localhost:5000/api/quotations/get_quotations_with_authors")
-
-  .then(response => {
+async function fetchData() {
+  try {
+    const response = await fetch("http://localhost:5000/api/quotations/get_quotations_with_authors");
     if (!response.ok) {
       throw new Error(`Error requesting the server: '${response.status}'.`);
     }
-    return response.json();
-  })
+    formattedResponse = await response.json();
+    return formattedResponse.data;
 
-  .catch(error => {
+  } catch (error) {
     throw new Error(`Error attempting request the server: '${error.message}'.`);
-  });
+  }
 }
 
 function displayData(data) {
@@ -35,17 +34,17 @@ function displayData(data) {
 }
 
 function displayQuotation(data) {
-  let container = document.createElement("div");
+  const container = document.createElement("div");
   container.className = "quote-container";
   
-  let box = document.createElement("div");
+  const box = document.createElement("div");
   box.className = "quote-box";
   
-  let quote = document.createElement("q");
+  const quote = document.createElement("q");
   quote.className = "left";
   quote.textContent = data.quotation;
   
-  let author = document.createElement("p");
+  const author = document.createElement("p");
   author.className = "right";
   
   if (data.first_name !== null) {
