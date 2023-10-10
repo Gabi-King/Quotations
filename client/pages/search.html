@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width"> <!--Ensures the page renders at the good width.-->
 
         <title>Quotations</title>
-        <link rel="icon" type="image/x-icon" href="../../img/icon.png">
+        <link rel="icon" type="image/x-icon" href="../img/icon.png">
 
-        <link rel="stylesheet" type="text/css" href="../../styles.css">
+        <link rel="stylesheet" type="text/css" href="../styles.css">
 
-        <script defer type="text/javascript" src="./index.js"></script>
+        <script defer type="text/javascript" src="search.js"></script>
 
-        <script defer type="text/javascript" src="../../components/header.js"></script>
-        <script defer type="text/javascript" src="../../components/footer.js"></script>
+        <script defer type="text/javascript" src="../components/header.js"></script>
+        <script defer type="text/javascript" src="../components/footer.js"></script>
 
         <!--Import fonts from Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,11 @@
         <main>
             <hr>
             <div>
-                <section id="stats-section">
-                    <h2 class="center">Home</h2>
-                    <p id="server-status" class="center">Requesting the server...</p>
+                <section id="search-section">
+                    <h2 class="center">Search quotations</h2>
+                    <p id="server-status" class="center">Waiting for your input...</p>
+                    <label for="phrase">Enter a quotation or a word to search:<br></label>
+                    <input type="text" id="phrase" name="phrase" placeholder="Search...">
                 </section>
                 <hr>
             </div>

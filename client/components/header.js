@@ -1,7 +1,7 @@
 const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
-  <link rel="stylesheet" type="text/css" href="../../styles.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
 
   <!--Import fonts from Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@ headerTemplate.innerHTML = `
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
   <header>
-    <img class="center block" alt="Icon representing a sunrise." width="100px"  src="../../img/icon.png">
+    <img class="center block" alt="Icon representing a sunrise." width="100px"  src="../img/icon.png">
     <div class="center container">
       <div class="center box">
         <h1>Quotations</h1>
@@ -21,10 +21,10 @@ headerTemplate.innerHTML = `
     </div>
     <nav>
       <ul>
-        <li><a href="../../pages/index/index.html">Home</a></li>
-        <li><a href="../../pages/all/all.html">All quotations</a></li>
-        <li><a href="../../pages/search/search.html">Search quotations</a></li>
-        <li><a href="../../pages/contact/contact.html">Contact</a></li>
+        <li><a href="../pages/index.html">Home</a></li>
+        <li><a href="../pages/all.html">All quotations</a></li>
+        <li><a href="../pages/search.html">Search quotations</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
