@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "first_name": null,
+            "last_name": "Confucius",
+            "publication": null,
+            "quotation": "Choose a job you love and you'll never have to work a day in your life."
+        },
+        {
+            "first_name": "Steve",
+            "last_name": "Jobs",
+            "publication": "Sun, 12 Jun 2005 00:00:00 GMT",
+            "quotation": "Your time is limited, so don't waste it living someone else's life."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": "Wed, 05 Feb 1930 00:00:00 GMT",
+            "quotation": "Life is like riding a bicycle. To keep your balance, you must keep moving."
+        },
+        {
+            "first_name": "Steve",
+            "last_name": "Jobs",
+            "publication": null,
+            "quotation": "My favorite things in life don't cost any money. It's really clear that the most precious resource we all have is time."
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "first_name": null,
+            "last_name": "Confucius",
+            "publication": null,
+            "quotation": "Choose a job you love and you'll never have to work a day in your life."
+        },
+        {
+            "first_name": "Steve",
+            "last_name": "Jobs",
+            "publication": "Sun, 12 Jun 2005 00:00:00 GMT",
+            "quotation": "Your time is limited, so don't waste it living someone else's life."
+        },
+        {
+            "first_name": "Steve",
+            "last_name": "Jobs",
+            "publication": null,
+            "quotation": "My favorite things in life don't cost any money. It's really clear that the most precious resource we all have is time."
+        },
+        {
+            "first_name": "Neil",
+            "last_name": "Armstrong",
+            "publication": "Sun, 20 Jul 1969 00:00:00 GMT",
+            "quotation": "That's one small step for man, one giant leap for mankind."
+        },
+        {
+            "first_name": "William",
+            "last_name": "Shakespeare",
+            "publication": null,
+            "quotation": "A rose by any other name would smell as sweet."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": "Wed, 05 Feb 1930 00:00:00 GMT",
+            "quotation": "Life is like riding a bicycle. To keep your balance, you must keep moving."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": null,
+            "quotation": "Creativity is intelligence having fun."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": null,
+            "quotation": "A question that sometimes drives me hazy: am I or are the others crazy ?"
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": null,
+            "quotation": "Everything must be made as simple as possible. But not simpler."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": null,
+            "quotation": "It is not that I'm so smart. But I stay with the questions much longer."
+        },
+        {
+            "first_name": "Albert",
+            "last_name": "Einstein",
+            "publication": null,
+            "quotation": "A clever person solves a problem. A wise person avoids it."
+        },
+        {
+            "first_name": null,
+            "last_name": "Socrate",
+            "publication": null,
+            "quotation": "I know that I know nothing"
+        }
+    ]
+}
