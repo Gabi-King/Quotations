@@ -1,24 +1,31 @@
 import ssl
+import os
 from flask import Flask, jsonify, request, redirect
 from flask_cors import CORS, cross_origin
+from dotenv import load_dotenv
 import mysql.connector
+from pathlib import Path
+
+# Load environment variables from the root .env file
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/quotations/*": {"origins": "*"}}, supports_credentials=True)
 
 ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-ssl_context.load_cert_chain(certfile="certificate/quotations_server-cert.pem",
-                            keyfile="certificate/quotations_server-key.pem")
+ssl_context.load_cert_chain(
+    certfile="certificate/quotations_server-cert.pem",
+    keyfile="certificate/quotations_server-key.pem"
+)
 
-
-# MySQL database credentials
+# MySQL database credentials from environment variables
 DB = {
-    "host": "localhost",
-    "database": "quotations",
-    "user": "root",
-    "password": "nm6dyr!&rZmr&7q#EFh$",
+    "host": os.getenv("DB_HOST", "localhost"),
+    "database": os.getenv("DB_NAME", "quotations"),
+    "user": os.getenv("DB_USER", "root"),
+    "password": os.getenv("DB_PASSWORD", "password"),
     "ssl_ca": "certificate/quotations_server-cert.pem",
-    "ssl_disabled": False,
+    "ssl_disabled": os.getenv("DB_SSL_DISABLED", "False").lower() == "true",
 }
 
 
@@ -59,7 +66,7 @@ def get_stats():
             cursor.close()
         if connection is not None:
             connection.close()
-    
+
     return response
 
 
@@ -80,7 +87,7 @@ def get_quotations_with_authors():
 
         response = jsonify({"data": data})
 
-    except mysql.connector.Error as error:  
+    except mysql.connector.Error as error:
         response = jsonify({"error": error})
 
     finally:
@@ -88,7 +95,7 @@ def get_quotations_with_authors():
             cursor.close()
         if connection is not None:
             connection.close()
-    
+
     return response
 
 
@@ -110,7 +117,7 @@ def search_quotations():
         data = cursor.fetchall()
 
         response = jsonify({"data": data})
-    
+
     except mysql.connector.Error as error:
         response = jsonify({"error": error})
         print(error)
