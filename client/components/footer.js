@@ -17,7 +17,7 @@ footerTemplate.innerHTML = `
                 <img class="center block" src="../img/logo.png" alt="Logo of my company Gabriel Dong-Phuong" width="100px">
                 <p>Author: <i>Gabriel PHAN</i><br>
                     Website: <a target="_blank" href="https://www.gabriel.paris">gabriel.paris</a><br>
-                    (c) 2023 Gabriel PHAN. All rights reserved.</p>
+                    (c) 2024 Gabriel PHAN. All rights reserved.</p>
             </div>
         </footer>
 `;
