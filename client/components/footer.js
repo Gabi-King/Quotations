@@ -1,7 +1,7 @@
 const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   
     <!--Import fonts from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@ footerTemplate.innerHTML = `
   
         <footer>
             <div>
-                <img class="center block" src="../img/logo.png" alt="Logo of my company Gabriel Dong-Phuong" width="100px">
+                <img class="center block" src="img/logo.png" alt="Logo of my company Gabriel Dong-Phuong" width="100px">
                 <p>Author: <i>Gabriel PHAN</i><br>
                     Website: <a target="_blank" href="https://www.gabriel.paris">gabriel.paris</a><br>
                     (c) 2024 Gabriel PHAN. All rights reserved.</p>

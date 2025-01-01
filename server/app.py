@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 import mysql.connector
 from pathlib import Path
 
-# Load environment variables from the root .env file
 load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 app = Flask(__name__)
@@ -18,14 +17,13 @@ ssl_context.load_cert_chain(
     keyfile="certificate/quotations_server-key.pem"
 )
 
-# MySQL database credentials from environment variables
 DB = {
-    "host": os.getenv("DB_HOST", "localhost"),
-    "database": os.getenv("DB_NAME", "quotations"),
-    "user": os.getenv("DB_USER", "root"),
-    "password": os.getenv("DB_PASSWORD", "password"),
+    "host": os.getenv("MYSQL_HOST", "localhost"),
+    "database": os.getenv("MYSQL_NAME", "quotations"),
+    "user": os.getenv("MYSQL_USER", "user"),
+    "password": os.getenv("MYSQL_PASSWORD", "password"),
     "ssl_ca": "certificate/quotations_server-cert.pem",
-    "ssl_disabled": os.getenv("DB_SSL_DISABLED", "False").lower() == "true",
+    "ssl_disabled": os.getenv("MYSQL_SSL_DISABLED", "False").lower() == "true",
 }
 
 

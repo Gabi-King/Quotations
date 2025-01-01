@@ -1,5 +1,4 @@
 .idea
 .venv/
-database/
-docker/
+server/__pycache__/
 .env

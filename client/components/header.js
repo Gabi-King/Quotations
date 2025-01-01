@@ -1,7 +1,7 @@
 const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
-<link rel="stylesheet" type="text/css" href="../styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
 
 <!--Import fonts from Google Fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +21,10 @@ Verdana|Arial">
     </div>
     <nav>
         <ul>
-            <li><a href="../pages/index.html">Home</a></li>
-            <li><a href="../pages/all.html">All quotations</a></li>
-            <li><a href="../pages/search.html">Search quotations</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all.html">All quotations</a></li>
+            <li><a href="search.html">Search quotations</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
