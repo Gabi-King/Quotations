@@ -16,13 +16,13 @@ async function processApp() {
 async function fetchData() {
 
     try {
-        const response = await fetch("https://localhost:5000/api/quotations/get_stats");
+        const response = await fetch("https://quotations.gabriel.paris/api/get_stats");
         if (!response.ok) {
             throw new Error(`Error requesting the server: '${response.status}'.`);
         }
         const formatedResponse = await response.json();
-        const data = formatedResponse.data;
-        return JSON.parse(data);
+        return formatedResponse.data;
+
     } catch (error) {
         throw new Error(`Error attempting request the server: '${error.message}'.`);
     }

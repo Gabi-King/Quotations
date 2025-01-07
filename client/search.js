@@ -36,7 +36,7 @@ function initializePage() {
 }
 
 async function fetchData(phrase) {
-    const baseUrl = "https://localhost:5000/api/quotations/search_quotations";
+    const baseUrl = "https://quotations.gabriel.paris/api/search_quotations";
     const params = `?phrase=${phrase}`;
 
     try {
@@ -44,7 +44,7 @@ async function fetchData(phrase) {
         if (!response.ok) {
             throw new Error(`Error requesting the server: '${response.status}'.`);
         }
-        formattedResponse = await response.json();
+        const formattedResponse = await response.json();
         return formattedResponse.data;
 
     } catch (error) {

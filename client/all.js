@@ -15,11 +15,11 @@ async function processApp() {
 
 async function fetchData() {
     try {
-        const response = await fetch("https://localhost:5000/api/quotations/get_quotations_with_authors");
+        const response = await fetch("https://quotations.gabriel.paris/api/get_quotations_with_authors");
         if (!response.ok) {
             throw new Error(`Error requesting the server: '${response.status}'.`);
         }
-        formattedResponse = await response.json();
+        const formattedResponse = await response.json();
         return formattedResponse.data;
 
     } catch (error) {
