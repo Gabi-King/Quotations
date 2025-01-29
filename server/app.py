@@ -1,11 +1,10 @@
 import os
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import mysql.connector
-from pathlib import Path
 
-load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+load_dotenv("../.env")
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
