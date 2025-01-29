@@ -1,213 +1,213 @@
 /* Text */
 
 h1 {
-    margin: 0;
-    font-family: "Roboto", "Open Sans", "sans-serif";
-    font-weight: 100;
-    font-size: 3em;
-    font-variant: small-caps; /* All letters are in capital */
-    color: white;
+  margin: 0;
+  font-family: "Roboto", "Open Sans", "sans-serif";
+  font-weight: 100;
+  font-size: 3em;
+  font-variant: small-caps;
+  color: white;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
-    font-size: 2em;
-    color: DarkOrange;
+  font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
+  font-size: 2em;
+  color: DarkOrange;
 }
 
 body {
-    font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
-    font-size: 1em;
-    color: black;
-    text-align: center;
+  font-family: "Monaco", "Actor", "Tahoma", "Verdana", "Arial", "sans-serif";
+  font-size: 1em;
+  color: black;
+  text-align: center;
 }
 
 
 /* Elements - Header/footer */
 
 header, footer {
-    text-align: center;
-    color: white;
-    background-color: DarkKhaki;
-    margin: 20px;
-    padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: DarkKhaki;
+  margin: 20px;
+  padding: 20px;
 }
 
 header .quote-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 header .quote-box {
-    background-color: transparent;
-    border: 3px solid white;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px Gainsboro;
-    padding: 20px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px Gainsboro;
+  padding: 20px;
 }
 
 header a {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  
+
 nav ul li {
-    list-style: none;
-    display: inline;
+  list-style: none;
+  display: inline;
 }
 
 header a {
-    margin: 20px;
-    color: white;
-    text-decoration: none;
+  margin: 20px;
+  color: white;
+  text-decoration: none;
 }
-  
+
 nav a:hover {
-    padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 #fff;
+  padding-bottom: 5px;
+  box-shadow: inset 0 -2px 0 0 #fff;
 }
 
 
 /* Elements - Body */
 
 body {
-    background-color: rgb(200, 200, 200); /* Light grey */
+  background-color: rgb(200, 200, 200);
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
 }
 
 hr {
-    border: none;
-    background-color: black;
-    height: 2px;
-    margin-right: 20px;
-    margin-left: 20px;
+  border: none;
+  background-color: black;
+  height: 2px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 button {
-    background-color: Goldenrod;
-    border: none;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: 0.2s;
+  background-color: Goldenrod;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.2s;
 }
 
-button:hover { /* When button is hovered */
-    background-color: DarkGoldenrod;
+button:hover {
+  background-color: DarkGoldenrod;
 }
 
 input[type="text"] {
-    width: 80%;
-    font-size: 1em;
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid Gainsboro;
-    border-radius: 10px;
+  width: 80%;
+  font-size: 1em;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid Gainsboro;
+  border-radius: 10px;
 }
-  
-  input[type="text"]:focus { /* When the text input is selected */
-    outline: none;
-    border-color: DarkGoldenrod;
-    box-shadow: 0 0 5px DarkGoldenrod;
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: DarkGoldenrod;
+  box-shadow: 0 0 5px DarkGoldenrod;
 }
 
 
 /* Widgets */
 
 .quote-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .quote-box {
-    background-color: LightGray;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px Gainsboro;
-    padding: 20px;
+  background-color: LightGray;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px Gainsboro;
+  padding: 20px;
 }
 
 .stats-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
 }
 
 .stats-box {
-    width: 200px;
-    height: 200px;
-    border: 5px solid Black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 50%;
-    padding: 20px
+  width: 200px;
+  height: 200px;
+  border: 5px solid Black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px
 }
 
 .left-column-contacts-table {
-    text-align: right;
+  text-align: right;
 }
 
 .right-column-contacts-table {
-    text-align: left;
+  text-align: left;
 }
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 100,
-  'GRAD' -25,
-  'opsz' 48
+          'FILL' 0,
+          'wght' 100,
+          'GRAD' -25,
+          'opsz' 48
 }
 
 
 /* Add style */
 
 .center {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .left {
-    text-align: left;
+  text-align: left;
 }
 
 .right {
-    text-align: right;
+  text-align: right;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 .block {
-    display: block;
+  display: block;
 }
 
 .bigger {
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
