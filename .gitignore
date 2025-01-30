@@ -1,4 +1,8 @@
 .idea
 .venv/
+
 server/__pycache__/
+
+db/backups/
+
 .env
