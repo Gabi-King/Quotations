@@ -4,7 +4,7 @@
 # when project is in development to enable access via domain name and API requests.
 
 FILES_PATH="/var/www/quotations.gabriel.paris"
-LOGS_PATH="/etc/log/nginx/quotations.gabriel.paris"
+LOGS_PATH="/var/log/nginx/quotations.gabriel.paris"
 CONFIG_FILE_1="/etc/nginx/sites-available/quotations.gabriel.paris"
 CONFIG_FILE_2="/etc/nginx/sites-enabled/quotations.gabriel.paris"
 
